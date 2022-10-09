@@ -1,0 +1,13 @@
+.card_body {
+  text-align: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: #000;
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: #fff;
+}

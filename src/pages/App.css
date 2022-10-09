@@ -1,0 +1,33 @@
+.card_title {
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.card_secondtitle {
+  font-size: 20px;
+  font-weight: 600px;
+}
+.card_p {
+  text-align: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.card_button {
+  border-radius: 7px;
+  font-size: 23px;
+  color: #0a4188;
+  background-color: aliceblue;
+  margin: 13px;
+  padding: 7px 72px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  box-shadow: 5px 5px;
+  text-decoration: none;
+}
+.card_button:hover {
+  background-color: #0a4188;
+  color: white;
+}
