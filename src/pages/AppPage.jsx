@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "../Card";
-
 import "./AppPage.css";
+import "./App.css";
 
 const WebController = ({ onChange }) => {
   const [state, setState] = useState({
@@ -70,34 +70,41 @@ export const AppPage = () => {
 
   return (
     <Card>
-      <p>¿Qué quieres hacer?</p>
-      <input
+    <ul className="card_options">
+      <p className='card_app'>What budget do you want to consult?</p>
+      <li><input
         type={"checkbox"}
         id="web"
         onInput={({ target }) => setWebInput(target.checked)}
       />
-      <label htmlFor="web">Una página web (500€)</label>
+      <label htmlFor="web">💻Webpage (500€)</label>
       {isWebInput && <WebController onChange={handleWebPrice} />}
-
-      <input
+      </li>
+     
+<li>
+<input
         type={"checkbox"}
         id="seo"
         onInput={({ target }) =>
           setTotal((prevValue) => (target.checked ? prevValue + 300 : 0))
         }
       />
-      <label htmlFor="seo">Una consultoria SEO (300€)</label>
-
-      <input
+      <label htmlFor="seo">🔍SEO consultancy(300€)</label>
+</li>
+    
+<li>
+<input
         type={"checkbox"}
         id="ads"
         onInput={({ target }) =>
           setTotal((prevValue) => (target.checked ? prevValue + 200 : 0))
         }
       />
-      <label htmlFor="ads">Una campaña de Google Ads (200€)</label>
-
-      <p>Precio: {total + totalWeb}€</p>
+      <label htmlFor="ads">📢Google Ads Campaign (200€)</label>
+</li>
+    
+      <p>Precio: {total + totalWeb}€ 💶</p>
+    </ul>
     </Card>
   );
 };

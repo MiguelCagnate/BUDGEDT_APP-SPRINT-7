@@ -1,13 +1,15 @@
 .card_body {
+  font-weight: 600;
   text-align: center;
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: justify;
   margin: auto;
   color: #000;
-  border-radius: 25px;
-  padding: 1rem;
+  border-radius: 17px;
+  border-style: groove;
+  padding: 2rem;
   background-color: #fff;
 }
