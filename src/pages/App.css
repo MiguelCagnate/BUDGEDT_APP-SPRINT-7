@@ -2,8 +2,7 @@
   font-size: 45px;
   font-style: italic;
   font-weight: 400;
-  
-  padding: 5px;
+ 
 }
 
 .card_secondtitle {
@@ -20,17 +19,17 @@
   padding: 7px;
 }
 .card_button {
-  border-radius: 7px;
-  font-size: 20px;
-  color: #0a4188;
   background-color: aliceblue;
-  margin: 7px;
-  padding: 7px 72px;
-  transition: 0.3s;
-  cursor: pointer;
+  border-radius: 7px;
   border: none;
   box-shadow: 7px 7px;
+  color: #0a4188;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 7px;
+  padding: 7px 72px;
   text-decoration: none;
+  transition: 0.3s;
 }
 .card_button:hover {
   background-color: #0a4188;
@@ -38,19 +37,26 @@
 }
 
 .card_app{
-font-size: 25px;
-text-align: left;
-margin: 9px;
-padding: 5px;
+align-self: flex-start;
+text-align: justify;
+font-size: 35px;
+margin: 15px;
+padding: 15px;
 
 }
 
 .card_options{
   font-size: 21px;
   text-align: justify;
-  margin: 25px;
+  margin: 12px;
   padding:13px;
   width:100%;
-  list-style-type: none; 
- 
+  list-style-type: none;  
+}
+.StyleWebPage{
+  margin:15px; 
+  padding:13px;
+  text-align: justify;
+  height: 20%;
+  list-style-type: none;
 }

@@ -10,8 +10,7 @@ const WebController = ({ onChange }) => {
   });
 
   const handleChange = ({ target }) => {
-    setState((prevState) => {
-      return {
+    setState((prevState) => {return {
         ...prevState,
         [target.name]: target.value,
       };
@@ -23,22 +22,10 @@ const WebController = ({ onChange }) => {
   }, [state]);
 
   return (
-    <>
-      <input
-        type={"number"}
-        name="pages"
-        min={1}
-        value={state.pages}
-        onChange={handleChange}
-      />
-      <input
-        type={"number"}
-        min={1}
-        name="languages"
-        value={state.languages}
-        onChange={handleChange}
-      />
-    </>
+    <div className="StyleWebPage"><ul><li>Pages<input type={"number"} name="pages" min={1} value={state.pages} onChange={handleChange}/></li>
+    <li>Languages<input type={"number"} name="languages" min={1} value={state.languages} onChange={handleChange}/></li>
+    </ul>
+    </div>
   );
 };
 
@@ -57,7 +44,7 @@ export const AppPage = () => {
     if (+pages > 1) CALC_PRICE += +pages * PRICE_PER_PAGE;
     if (+languages > 1) CALC_PRICE += +languages * PRICE_PER_LANGUAGE;
 
-    const TOTAL = BASE_PRICE + CALC_PRICE;
+      const TOTAL = BASE_PRICE + CALC_PRICE
     setTotalWeb(TOTAL);
   };
 
@@ -79,24 +66,15 @@ export const AppPage = () => {
       />
       <label htmlFor="web">💻Webpage (500€)</label>
       {isWebInput && <WebController onChange={handleWebPrice} />}
-      </li>
-     
+      </li>     
 <li>
-<input
-        type={"checkbox"}
-        id="seo"
-        onInput={({ target }) =>
+<input type={"checkbox"} id="seo" onInput={({ target }) =>
           setTotal((prevValue) => (target.checked ? prevValue + 300 : 0))
-        }
-      />
+        }/>
       <label htmlFor="seo">🔍SEO consultancy(300€)</label>
 </li>
     
-<li>
-<input
-        type={"checkbox"}
-        id="ads"
-        onInput={({ target }) =>
+<li><input type={"checkbox"}id="ads" onInput={({ target }) =>
           setTotal((prevValue) => (target.checked ? prevValue + 200 : 0))
         }
       />
