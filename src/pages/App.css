@@ -6,8 +6,8 @@
 }
 
 .card_secondtitle {
-  font-size: 20px;
-  font-weight: 600px;
+  font-size: 17px;
+  font-weight: 80px;
   margin: 4px;
   padding:3px;
   text-align: justify;
@@ -39,24 +39,48 @@
 .card_app{
 align-self: flex-start;
 text-align: justify;
-font-size: 35px;
-margin: 15px;
-padding: 15px;
+font-size: 30px;
+margin: 20px;
+padding: 9px;
+
 
 }
 
 .card_options{
-  font-size: 21px;
+  font-size: 20px;
   text-align: justify;
-  margin: 12px;
-  padding:13px;
+  margin: 23px;
+  padding:2px;
   width:100%;
   list-style-type: none;  
 }
 .StyleWebPage{
-  margin:15px; 
-  padding:13px;
+  margin:13px; 
+  padding:5px;
   text-align: justify;
-  height: 20%;
+  height: 10%;
+  border-radius: 9px;
+  border-style: groove;
+  box-shadow: 10px 5px 5px gray;
   list-style-type: none;
+}
+
+.SumRestButtons{
+  font-size:small; 
+  margin: 3px;
+  padding: 2px;
+  background-color: rgb(241, 86, 58);
+  color: white;
+  border:none;
+  border-radius: 3px;
+}
+
+
+.WarningButtons{
+  font-size: xx-small; 
+  margin: 5px;
+  padding: 2px;
+  background-color: yellow;
+  border-radius: 7px;
+  border-width: 0.9px;
 }

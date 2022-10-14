@@ -9,10 +9,12 @@
   font-family: "Montserrat", sans-serif;
   position: absolute;
   text-align: justify;
+  
 }
 form {
   margin-top: 2rem;
 }
 .card_app{
     width: 90%;
+    
   }

@@ -22,8 +22,27 @@ const WebController = ({ onChange }) => {
   }, [state]);
 
   return (
-    <div className="StyleWebPage"><ul><li>Pages<input type={"number"} name="pages" min={1} value={state.pages} onChange={handleChange}/></li>
-    <li>Languages<input type={"number"} name="languages" min={1} value={state.languages} onChange={handleChange}/></li>
+    <div>
+    <ul className="StyleWebPage">
+    <li>Pages Number <button className="SumRestButtons" type={"number"} name="pages" min={1} value={state.pages} onChange={handleChange}>
+    ➕
+    </button><button className="SumRestButtons">
+    ➖
+    </button>
+    
+
+    <button className="WarningButtons">⚠️</button> </li>
+    
+   
+    <li>Languages Number<input type={"number"} name="languages" min={1} value={state.languages} onChange={handleChange}/>
+    <button className="SumRestButtons" type={"number"} name="pages" min={1} value={state.pages} onChange={handleChange}>
+    ➕
+    </button><button className="SumRestButtons">
+    ➖
+    </button>
+    <button className="WarningButtons">⚠️</button>
+    </li> 
+ 
     </ul>
     </div>
   );
