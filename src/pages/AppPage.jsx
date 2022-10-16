@@ -8,7 +8,8 @@ const WebController = ({ onChange }) => {
   const [state, setState] = useState({
     pages: 1,
     languages: 1,
-    modal: false,
+    modal1: false,
+    modal2: false,
   });
 
   useEffect(() => {
@@ -21,12 +22,8 @@ const WebController = ({ onChange }) => {
         <ul className="StyleWebPage">
           <li>
             Pages Number{" "}
-            <button
-              type="button"
-              className="SumRestButtons"
-              value={state.pages}
-              onClick={() =>
-                setState((prev) => {
+            <button type="button" className="SumRestButtons" value={state.pages}
+              onClick={() => setState((prev) => {
                   return {
                     ...prev,
                     pages: prev.pages + 1,
@@ -37,12 +34,8 @@ const WebController = ({ onChange }) => {
               ➕
             </button>
             <span>{state.pages}</span>
-            <button
-              className="SumRestButtons"
-              type="button"
-              value={state.pages}
-              onClick={() =>
-                setState((prev) => {
+            <button className="SumRestButtons" type="button" value={state.pages}
+              onClick={() => setState((prev) => {
                   return {
                     ...prev,
                     pages: prev.pages > 1 ? prev.pages - 1 : 1,
@@ -52,82 +45,32 @@ const WebController = ({ onChange }) => {
             >
               ➖
             </button>
-            <button
-              className="WarningButtons"
-              onClick={() =>
-                setState((prev) => {
-                  return {
-                    ...prev,
-                    modal: true,
-                  };
-                })
-              }
-            >
-              ⚠️
-            </button>{" "}
+            <button className="WarningButtons" onClick={() => setState((prev) => {
+                  return {...prev, modal1: true, }; })} > ⚠️ </button>{" "}
           </li>
           <li>
             Languages Number
-            <button
-              type="button"
-              className="SumRestButtons"
-              onClick={() =>
-                setState((prev) => {
-                  return {
-                    ...prev,
-                    languages: prev.languages + 1,
-                  };
-                })
-              }
-            >
-              ➕
-            </button>
-            <span>{state.languages}</span>
-            <button
-              className="SumRestButtons"
-              type="button"
-              value={state.languages}
-              onClick={() =>
-                setState((prev) => {
-                  return {
-                    ...prev,
-                    languages: prev.languages > 1 ? prev.languages - 1 : 1,
-                  };
-                })
-              }
-            >
-              ➖
-            </button>
-            <button
-              className="WarningButtons"
-              onClick={() =>
-                setState((prev) => {
-                  return {
-                    ...prev,
-                    modal: true,
-                  };
-                })
-              }
-            >
-              ⚠️
-            </button>
+            <button type="button" className="SumRestButtons" onClick={() => setState((prev) => {
+                  return { ...prev, languages: prev.languages + 1, }; })} > ➕ </button>
+            <span>
+            {state.languages}
+            </span>
+
+            <button className="SumRestButtons" type="button" value={state.languages} onClick={() => setState((prev) => {
+                  return {...prev, languages: prev.languages > 1 ? prev.languages - 1 : 1, }; })} > ➖ </button>
+
+            <button className="WarningButtons" onClick={() => setState((prev) => { 
+              return { ...prev, modal2: true, }; })}> ⚠️</button>
+              
           </li>
         </ul>
       </div>
-      {state.modal && (
-        <Modal
-          onClose={() =>
-            setState((prev) => {
-              return {
-                ...prev,
-                modal: false,
-              };
-            })
-          }
-        >
-          This Component must point the page number of your choice
-        </Modal>
-      )}
+      {state.modal1 && (<Modal onClose={() => setState((prev) => {return {...prev, modal1: false,}; })}>
+          This Component must point the pages number of your choice✅</Modal>)}
+
+          {state.modal2 && (<Modal onClose={() => setState((prev) => {return {...prev, modal2: false,}; })}>
+          This Component must point the languages number of your choice✅</Modal>)}
+     
     </>
   );
 };
@@ -141,7 +84,6 @@ export const AppPage = () => {
     const BASE_PRICE = 500;
     const PRICE_PER_PAGE = +pages > 1 ? 30 : 1;
     const PRICE_PER_LANGUAGE = +languages > 1 ? 30 : 1;
-
     let CALC_PRICE = 0;
 
     if (+pages > 1) CALC_PRICE += +pages < 0 ? 1 : pages * PRICE_PER_PAGE;
