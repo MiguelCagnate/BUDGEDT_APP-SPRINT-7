@@ -1,22 +1,22 @@
 .card_title {
   font-size: 45px;
   font-style: italic;
-  font-weight: 400;
- 
+  font-weight: 400; 
 }
 
 .card_secondtitle {
   font-size: 17px;
-  font-weight: 80px;
-  margin: 4px;
+  font-weight: 200;
+  margin: 3px;
   padding:3px;
   text-align: justify;
+  width: auto;
 }
 .card_p {
   text-align: justify;
   align-items: center;
-  margin:13px;
-  padding: 7px;
+  margin:5px;
+  padding: 5px;
 }
 .card_button {
   background-color: aliceblue;
@@ -38,24 +38,22 @@
 
 .card_app{
 align-self: flex-start;
-text-align: justify;
+text-align: left;
 font-size: 30px;
-margin: 20px;
+margin: 10px;
 padding: 9px;
-
-
 }
 
 .card_options{
   font-size: 20px;
   text-align: justify;
   margin: 23px;
-  padding:2px;
+  padding:21px;
   width:100%;
   list-style-type: none;  
 }
 .StyleWebPage{
-  margin:13px; 
+  margin:7px; 
   padding:5px;
   text-align: justify;
   height: 10%;
@@ -85,3 +83,16 @@ padding: 9px;
   border-width: 0.9px;
 }
 
+.PriceSyle{
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+  padding: 5px;
+  
+  font-family: "Montserrat", sans-serif;
+}
+
+.LabelStyle{
+  margin: 3px;
+  font-size: 21px;
+}

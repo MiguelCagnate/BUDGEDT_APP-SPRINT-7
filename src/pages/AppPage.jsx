@@ -111,7 +111,7 @@ export const AppPage = () => {
               id="web"
               onInput={({ target }) => setWebInput(target.checked)}
             />
-            <label htmlFor="web">💻Webpage (500€)</label>
+            <label htmlFor="web" className="LabelStyle">💻Webpage (500€)</label>
             {isWebInput && <WebController onChange={handleWebPrice} />}
           </li>
           <li>
@@ -122,7 +122,7 @@ export const AppPage = () => {
                 setTotal((prevValue) => (target.checked ? prevValue + 300 : 0))
               }
             />
-            <label htmlFor="seo">🔍SEO consultancy(300€)</label>
+            <label htmlFor="seo" className="LabelStyle">🔍SEO consultancy(300€)</label>
           </li>
 
           <li>
@@ -133,10 +133,10 @@ export const AppPage = () => {
                 setTotal((prevValue) => (target.checked ? prevValue + 200 : 0))
               }
             />
-            <label htmlFor="ads">📢Google Ads Campaign (200€)</label>
+            <label htmlFor="ads" className="LabelStyle">📢Google Ads Campaign (200€)</label>
           </li>
 
-          <p>Precio: {total + totalWeb}€ 💶</p>
+          <p className="PriceSyle">Total Price: {total + totalWeb}€ 💶</p>
         </ul>
       </Card>
     </>

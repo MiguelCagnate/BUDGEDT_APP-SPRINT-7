@@ -1,14 +1,14 @@
 .card {
-  display: flex;
-  justify-content: center;
   background-color: salmon;
-  width: 750px;
-  height: 450px;
   border-radius: 10px;
-  padding: 2rem 3rem 3rem 3rem;
+  display: flex;
   font-family: "Montserrat", sans-serif;
+  height: 450px;
+  justify-content: center;
+  padding: 2rem 3rem 3rem 3rem;
   position: absolute;
   text-align: justify;
+  width: 750px;
   
 }
 form {
