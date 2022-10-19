@@ -16,4 +16,8 @@ Challenging exercise base on REACT JS. This is an online app to set the cost of 
 ### Built With: 
  $${\color{lightgreen}REACT JS}$$  <h4 align="center">https://es.reactjs.org/ </h4>
 
-
+### Prerequisites
+## npm
+  ```sh
+  npm install npm@latest -g
+  ```
